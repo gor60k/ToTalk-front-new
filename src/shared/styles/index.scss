@@ -1,7 +1,17 @@
+@import './variables';
+@import './ui.scss';
+@import './fonts';
+
 @import 'scss-reset/reset';
 
 body {
-    background: #202225;
+    background: $dark-gray;
+    font-family: 'Nunito';
+
+    * {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 #root {
@@ -28,10 +38,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2px;
-}
 
-section {
-    width: 100%;
-    height: 100%;
-    background: #292b2f;
+    &-section  {
+        width: 100%;
+        height: 100%;
+        background: $base-gray;
+    }
 }

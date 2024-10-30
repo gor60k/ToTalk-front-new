@@ -1,12 +1,13 @@
 import React from "react"
 import PageHead from "../../shared/ui/PageHead/PageHead"
+import ItemList from "../../shared/ui/ItemList/ItemList"
 
 const categories = () => {
   return (
     <main className="page">
-      <PageHead title="Categories"/>
-      <section>
-        123
+      <PageHead title="Categories" />
+      <section className="page-section">
+        <ItemList />
       </section>
     </main>
   )

@@ -1,0 +1,66 @@
+.item-card {
+    height: 250px;
+    background: $light-gray;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &_wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 5%;
+        //     opacity: .5;
+        //     transition: .3s;
+        // }
+
+        // @for $i from 1 through 4 {
+        //     &:nth-child(4n + #{$i}) {
+        //         &::after {
+        //             background: nth((#1565c0,
+        //                         #1976d2,
+        //                         #1e88e5,
+        //                         #2196f3), $i);
+        //         }
+        //     }
+        // }
+    }
+
+    &_name {
+        @extend %h3;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+    }
+
+    &_description {
+        background: $dark-gray;
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: -100%;
+        padding: 20px;
+        transition: .3s;
+    }
+
+    &:hover {
+        .item-card_description {
+            left: 0;
+            transition: .3s;
+        }
+
+        .item-card_wrapper::after {
+            height: 100%;
+            transition: .3s;
+        }
+    }
+}

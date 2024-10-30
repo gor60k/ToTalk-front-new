@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './PageHead.module.scss';
 
 interface PageData {
     title: string
@@ -7,7 +6,7 @@ interface PageData {
 
 const PageHead: React.FC<PageData> = ({title}) => {
   return (
-    <div className={styles.page_head}>
+    <div className='page-head'>
         <h1>{title}</h1>
     </div>
   )
