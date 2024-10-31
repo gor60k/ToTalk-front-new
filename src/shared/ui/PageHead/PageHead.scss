@@ -1,4 +1,12 @@
 .page-head {
     width: 100%;
     background: #292b2f;
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_title {
+        @extend %h1;
+    }
 }

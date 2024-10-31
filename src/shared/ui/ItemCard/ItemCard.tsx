@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import LinkButton from '../LinkButton/LinkButton';
 
 interface ItemCard {
     link: string;
@@ -9,7 +9,7 @@ interface ItemCard {
 
 const ItemCard: React.FC<ItemCard> = ({ link, name, description }) => {
     return (
-        <Link to={link} className='item-card'>
+        <div className='item-card'>
             <div className="item-card_wrapper">
                 <h3 className="item-card_name">
                     {name}
@@ -17,8 +17,9 @@ const ItemCard: React.FC<ItemCard> = ({ link, name, description }) => {
                 <div className="item-card_description">
                     {description}
                 </div>
+                <LinkButton path={link} text={'Перейти'} />
             </div>
-        </Link>
+        </div>
     )
 }
 

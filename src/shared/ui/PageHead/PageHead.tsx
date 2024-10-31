@@ -7,7 +7,7 @@ interface PageData {
 const PageHead: React.FC<PageData> = ({title}) => {
   return (
     <div className='page-head'>
-        <h1>{title}</h1>
+        <h1 className='page-head_title'>{title}</h1>
     </div>
   )
 }

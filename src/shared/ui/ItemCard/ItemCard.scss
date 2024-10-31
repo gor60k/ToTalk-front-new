@@ -4,33 +4,21 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px 2px transparent;
+    transition: .3s;
+
+    .base-button {
+        position: absolute;
+        bottom: 20px;
+        right: -100%;
+        transition: .3s;
+    }
 
     &_wrapper {
         width: 100%;
         height: 100%;
         position: relative;
-
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 5%;
-        //     opacity: .5;
-        //     transition: .3s;
-        // }
-
-        // @for $i from 1 through 4 {
-        //     &:nth-child(4n + #{$i}) {
-        //         &::after {
-        //             background: nth((#1565c0,
-        //                         #1976d2,
-        //                         #1e88e5,
-        //                         #2196f3), $i);
-        //         }
-        //     }
-        // }
     }
 
     &_name {
@@ -42,6 +30,7 @@
     }
 
     &_description {
+        max-width: 200px;
         background: $dark-gray;
         position: absolute;
         height: 100%;
@@ -53,14 +42,19 @@
     }
 
     &:hover {
+
+        border: 1px solid #42a5f5;
+        box-shadow: 0px 0px 10px 0px #1e88e5;
+        transition: .3s;
+
         .item-card_description {
             left: 0;
-            transition: .3s;
+            transition-delay: .2s;
         }
 
-        .item-card_wrapper::after {
-            height: 100%;
-            transition: .3s;
+        .base-button {
+            right: 20px;
+            transition-delay: .2s;
         }
     }
 }
