@@ -3,42 +3,42 @@ import ItemCard from '../ItemCard/ItemCard';
 
 const items: { name: string; description: string; link: string }[] = [
     {
-        name: 'card1',
+        name: 'Спорт',
         description: 'discription1',
         link: '/categories/1/chat-rooms'
     },
     {
-        name: 'card2',
+        name: 'Книги',
         description: 'discription2',
         link: '/'
     },
     {
-        name: 'card3',
+        name: 'Игры',
         description: 'discription3',
         link: '/'
     },
     {
-        name: 'card4',
+        name: 'Кулинария',
         description: 'discription4',
         link: '/'
     },
     {
-        name: 'card5',
+        name: 'Политика',
         description: 'discription5',
         link: '/'
     },
     {
-        name: 'card6',
+        name: 'История',
         description: 'discription6',
         link: '/'
     },
     {
-        name: 'card7',
+        name: 'Что-то',
         description: 'discription7',
         link: '/'
     },
     {
-        name: 'card8',
+        name: 'Что-то еще',
         description: 'discription8',
         link: '/'
     },
@@ -49,7 +49,7 @@ const ItemList = () => {
         <div className="item-list">
             <div className="item-list_wrapper">
                 {items.map(({name, description, link}) => (
-                    <ItemCard name={name} description={description} link={link}/>
+                    <ItemCard name={name} description={description} link={link} key={name} />
                 ))}
             </div>
         </div>

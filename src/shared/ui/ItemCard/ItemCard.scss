@@ -1,17 +1,36 @@
 .item-card {
+    @extend %neon-animation;
     height: 250px;
     background: $light-gray;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    border: 1px solid transparent;
-    box-shadow: 0px 5px 10px 2px transparent;
-    transition: .3s;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -130px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        transition: .3s;
+    }
+
+    @for $i from 1 through 4 {
+        &:nth-child(4n + #{$i}) {
+            &::after {
+                background: url('../../../../assets/icons/card-bg#{$i}.svg') center no-repeat;
+                background-size: cover;
+            }
+        }
+    }
 
     .base-button {
         position: absolute;
         bottom: 20px;
         right: -100%;
+        background: $dark-gray;
         transition: .3s;
     }
 
@@ -19,6 +38,7 @@
         width: 100%;
         height: 100%;
         position: relative;
+        z-index: 1;
     }
 
     &_name {
@@ -43,9 +63,10 @@
 
     &:hover {
 
-        border: 1px solid #42a5f5;
-        box-shadow: 0px 0px 10px 0px #1e88e5;
-        transition: .3s;
+        &::after {
+            opacity: .1;
+            transition: .3s;
+        }
 
         .item-card_description {
             left: 0;

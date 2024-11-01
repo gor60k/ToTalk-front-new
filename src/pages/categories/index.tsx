@@ -5,7 +5,7 @@ import ItemList from "../../shared/ui/ItemList/ItemList"
 const categories = () => {
   return (
     <main className="page">
-      <PageHead title="Categories" />
+      <PageHead title="Категории" />
       <section className="page-section">
         <ItemList />
       </section>

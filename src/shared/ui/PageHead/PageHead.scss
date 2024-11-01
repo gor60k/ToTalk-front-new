@@ -1,10 +1,19 @@
 .page-head {
+    @extend %neon-animation;
     width: 100%;
     background: #292b2f;
-    padding: 30px 0px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &_wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &_title {
         @extend %h1;
